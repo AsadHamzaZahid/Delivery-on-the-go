@@ -4,7 +4,8 @@ A food-delivery time predictor with a cinematic, story-style interface. Pick who
 
 ## 🔗 Live app
 
-**[https://delivery1232344324on12the12go123234432401.streamlit.app](#)**
+[Live app](https://delivery1232344324on12the12go123234432401.streamlit.app)
+
 
 ## What it does
 
