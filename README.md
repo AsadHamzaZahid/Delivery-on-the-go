@@ -4,7 +4,7 @@ A food-delivery time predictor with a cinematic, story-style interface. Pick who
 
 ## 🔗 Live app
 
-[Live app](https://delivery1232344324on12the12go123234432401.streamlit.app/)
+[Live app](https://streamlit.app)
 
 
 ## What it does
@@ -14,21 +14,6 @@ A food-delivery time predictor with a cinematic, story-style interface. Pick who
 - Suggests the **best hour to order** (the fastest hour between 08:00 and 22:00).
 - Shows how the time would change under **Low / Medium / High / Jam** traffic.
 - Two views: a **Customer** view on a spacious iPad, and a **Rider** view on a phone with extra rider details and Accept / Decline buttons.
-
-## The experience
-
-1. A scooter rides through a night skyline, then you choose **Customer** or **Rider**.
-2. A first-person scene plays (waking up hungry, or grabbing your helmet) and the device slides up.
-3. Tap the map to place the restaurant and the delivery spot, or type a distance.
-4. Press **Predict delivery time**:
-   - clouds cover the screen and part to reveal an illustrated town map,
-   - the restaurant and home pins drop in,
-   - a red dotted line draws between them,
-   - a red delivery vehicle (scooter, motorcycle, electric scooter or bicycle, depending on the rider's vehicle) drives the route,
-   - a pizza box opens with your delivery time (with confetti for fast deliveries).
-5. Press **More options in the app** to see the best-time chart and the traffic comparison.
-
-Extras: a weather sky on the reveal map (sunny, cloudy, fog, stormy, sandstorm, windy), three imaginary towns you can switch between (Sakura Harbor, Cloud Meadow, Crayon Hills), synthesized background music and sound effects, and a mute button.
 
 ## How it works
 
