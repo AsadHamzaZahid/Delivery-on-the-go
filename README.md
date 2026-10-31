@@ -2,18 +2,21 @@
 
 A food-delivery time predictor with a cinematic, story-style interface. Pick who you are (a hungry customer or a delivery rider), set the conditions, press **Predict**, and watch the delivery play out on a map before the pizza box reveals your estimated time.
 
-## 🔗 Live app
+## 🌐 Live demo
 
-[Live app](https://streamlit.app)
+**[Open the live app](https://delivery1232344324on12the12go123234432401.streamlit.app/)**
 
+---
 
-## What it does
+## 🤖 What it does
 
 - Predicts the delivery time in minutes from distance, weather, traffic, order type, festival, city type, hour of day and (for riders) age, rating, vehicle and vehicle condition.
 - Shows a typical error range around the estimate (the tuned model's test MAE is about 3.2 minutes).
 - Suggests the **best hour to order** (the fastest hour between 08:00 and 22:00).
 - Shows how the time would change under **Low / Medium / High / Jam** traffic.
 - Two views: a **Customer** view on a spacious iPad, and a **Rider** view on a phone with extra rider details and Accept / Decline buttons.
+
+---
 
 ## How it works
 
@@ -27,7 +30,9 @@ The model was trained in a Jupyter notebook and exported as two files. The app l
 
 For each request the app encodes the inputs the same way as the notebook (traffic: Low=0, Medium=1, High=2, Jam=3; the rest one-hot encoded and aligned to the scaler's columns), scales them, and predicts. The best-time and traffic comparisons re-run the same model with a different hour or traffic level.
 
-## Run it locally
+---
+
+## 🚀 Getting started (local setup)
 
 1. Put `streamlit_app.py`, `standarized_scalar.pkl` and `xgb_model.pkl` in the same folder.
 2. Install the requirements:
@@ -36,7 +41,7 @@ For each request the app encodes the inputs the same way as the notebook (traffi
    pip install streamlit pandas joblib scikit-learn xgboost
    ```
 
-   Use the same `scikit-learn` and `xgboost` versions you trained with, otherwise the `.pkl` files may fail to load.
+   *Use the same `scikit-learn` and `xgboost` versions you trained with, otherwise the `.pkl` files may fail to load.*
 3. Start the app:
 
    ```bash
@@ -47,12 +52,18 @@ For each request the app encodes the inputs the same way as the notebook (traffi
 
 An internet connection is needed for the map library and the real map in the phone/iPad view (Leaflet and OpenStreetMap).
 
-## Notes and limits
+---
+
+## 📌 Notes and limits
 
 - The model only learned deliveries up to about 21 km, so distances are limited to 0.5 to 25 km.
 - The map animation is a visual simulation, not live tracking.
 - Estimates are a guide with a typical error of about 3 minutes.
 
-## Tech
+---
 
-Python, Streamlit, XGBoost, scikit-learn, pandas, joblib. Front end in plain HTML/CSS/JavaScript with Leaflet, drawn and animated in code, and sounds synthesized with the Web Audio API.
+## 🖥️ Tech stack
+
+- **Streamlit** — frontend / UI
+- **XGBoost & scikit-learn** — prediction model
+- **Python** — data pipeline and scaling (`streamlit_app.py`, `standarized_scalar.pkl`, `xgb_model.pkl`)
